@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
+:root {
+	--oxblood: #4a1f25;
+	--oxblood-dark: #321419;
+	--mushroom: #e7ded3;
+	--mushroom-light: #f5efe8;
+	--brass: #a47c43;
+	--brass-light: #c7a66d;
+	--ink: #2d2725;
+	--muted: #675e58;
+	--white: #fffaf4;
+	--content-width: 1120px;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--mushroom);
+	background-image: radial-gradient(rgba(74, 31, 37, 0.08) 1px, transparent 1px);
+	background-size: 18px 18px;
+	color: var(--ink);
+	font-family: 'DM Sans', sans-serif;
+	line-height: 1.7;
+}
+
+header,
+main,
+footer {
+	padding-left: 7vw;
+	padding-right: 7vw;
+}
+
+header {
+	background-color: var(--oxblood-dark);
+	border-bottom: 2px solid var(--brass);
+	color: var(--white);
+	padding-bottom: 1.25rem;
+	padding-top: 1.25rem;
+}
+
+nav {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: var(--content-width);
+}
+
+nav > a {
+	color: var(--white);
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 1.8rem;
+	font-weight: 700;
+	line-height: 1;
+	text-decoration: none;
+}
+
+nav > a::after {
+	color: var(--brass-light);
+	content: ' .';
+}
+
+nav ul {
+	display: flex;
+	gap: 2rem;
+	list-style: none;
+}
+
+nav li a {
+	color: var(--mushroom-light);
+	font-size: 0.82rem;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+nav li a:hover,
+nav li a:focus-visible {
+	color: var(--brass-light);
+}
+
+main {
+	margin: 0 auto;
+	max-width: calc(var(--content-width) + 14vw);
+}
+
+main section {
+	background-color: var(--mushroom-light);
+	border-bottom: 1px solid rgba(74, 31, 37, 0.18);
+	margin: 0 auto;
+	max-width: var(--content-width);
+	padding: clamp(3.5rem, 8vw, 7rem) clamp(1.5rem, 7vw, 6rem);
+}
+
+main section:first-child {
+	background-color: var(--oxblood);
+	color: var(--white);
+	padding-bottom: clamp(4.5rem, 10vw, 9rem);
+	padding-top: clamp(4.5rem, 10vw, 9rem);
+}
+
+h1,
+h2 {
+	font-family: 'Cormorant Garamond', serif;
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	line-height: 1.05;
+}
+
+h1 {
+	font-size: clamp(3.4rem, 8vw, 6.8rem);
+	max-width: 850px;
+}
+
+h2 {
+	color: var(--oxblood);
+	font-size: clamp(2.5rem, 5vw, 4.5rem);
+	margin-bottom: 1.5rem;
+}
+
+main section:first-child h1 {
+	color: var(--mushroom-light);
+}
+
+main section p {
+	color: var(--ink);
+	font-size: 1.05rem;
+	margin-top: 1.25rem;
+	max-width: 720px;
+}
+
+main section:first-child p {
+	color: var(--mushroom);
+}
+
+main section:first-child p:first-of-type {
+	border-left: 3px solid var(--brass-light);
+	padding-left: 1rem;
+}
+
+footer {
+	background-color: var(--oxblood-dark);
+	color: var(--mushroom-light);
+	margin: 0 auto;
+	padding-bottom: 3rem;
+	padding-top: 4.5rem;
+}
+
+footer section,
+footer address,
+footer > p {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: var(--content-width);
+}
+
+footer h2 {
+	color: var(--mushroom-light);
+}
+
+footer section > p,
+footer address p,
+footer li p,
+footer > p {
+	color: var(--mushroom);
+	font-size: 0.92rem;
+}
+
+footer ul {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(3, 1fr);
+	list-style: none;
+	margin-top: 2.5rem;
+}
+
+footer li {
+	background-color: rgba(255, 250, 244, 0.07);
+	border: 1px solid rgba(199, 166, 109, 0.45);
+	min-height: 185px;
+	padding: 1.25rem;
+}
+
+footer li img {
+	display: block;
+	height: 42px;
+	margin-bottom: 1rem;
+	width: 42px;
+}
+
+footer li span {
+	color: var(--brass-light);
+	display: block;
+	font-family: monospace;
+	font-size: 1.7rem;
+	height: 42px;
+	margin-bottom: 1rem;
+}
+
+footer li strong {
+	color: var(--brass-light);
+	display: block;
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+footer address {
+	border-top: 1px solid rgba(199, 166, 109, 0.45);
+	font-style: normal;
+	margin-top: 4rem;
+	padding-top: 1.5rem;
+}
+
+footer address a {
+	color: var(--brass-light);
+	display: inline-block;
+	margin-top: 0.25rem;
+	text-underline-offset: 0.3rem;
+}
+
+footer > p {
+	border-top: 1px solid rgba(199, 166, 109, 0.45);
+	font-size: 0.78rem;
+	margin-top: 3rem;
+	padding-top: 1.5rem;
+}
+
+@media (max-width: 700px) {
+	header,
+	main,
+	footer {
+		padding-left: 1.25rem;
+		padding-right: 1.25rem;
+	}
+
+	nav {
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 1.25rem;
+	}
+
+	nav ul {
+	gap: 1.25rem;
+	}
+
+	main section {
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+	}
+
+	footer ul {
+	grid-template-columns: 1fr;
+	}
+}
